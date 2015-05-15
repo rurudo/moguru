@@ -1,0 +1,36 @@
+#pragma once
+#include "BlockBase.h"
+
+enum BLOCK_TYPE
+{
+	BLOCK_NONE,
+	BLOCK_SAND,
+	BLOCK_SOIL,
+	BLOCK_STONE,
+	BLOCK_ROCK,
+	BLOCK_OLDBONE,
+	BLOCK_METAL,
+	BLOCK_DIAMOND,
+	BLOCK_MUD,
+	BLOCK_DEEPMUD,
+	BLOCK_TREE,
+	BLOCK_RESOURCE,
+	BLOCK_BOMB,
+	BLOCK_ALARM,
+	BLOCK_WATER,
+	BLOCK_WEAKICE,
+	BLOCK_HARDICE,
+	BLOCK_ENEMYICE,
+	BLOCK_FIREROCK,
+	BLOCK_FIRE,
+	BLOCK_CONFUSE,
+	BLOCK_DRILL,
+	BLOCK_DUMMY,
+	BLOCK_HARDSOIL,
+	BLOCK_NUM	// Ç¢Ç¬Ç‡ç≈å„
+};
+typedef BlockBase* (*CreateBlockTable)(void);
+
+#ifndef ___BLOCK_CREATE_MAIN___
+extern CreateBlockTable sp_CreateBlockTable[BLOCK_NUM];
+#endif
